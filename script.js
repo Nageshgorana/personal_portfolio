@@ -23,4 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
+
+  // Add staggered animation indices for project cards
+  const projects = document.querySelectorAll(".project.reveal");
+  projects.forEach((project, index) => {
+    project.style.setProperty("--index", index);
+  });
 });
